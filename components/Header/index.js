@@ -27,6 +27,11 @@ function Header() {
     dateSpan.classList.add('date');
     tempSpan.classList.add('temp');
 
+    dateSpan.textContent = ('SMARCH 28, 2019');
+    h1Title.textContent = ('Lambda Times');
+    tempSpan.textContent = ('98°');
+
+
 return headerParent;
 };
 
