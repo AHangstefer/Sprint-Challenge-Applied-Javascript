@@ -12,7 +12,7 @@
 //   <div class="author">
 //     <div class="img-container">
 //       <img src={url of authors image} />
-//     </div>
+//              </div>
 //     <span>By {author's name}</span>
 //   </div>
 // </div>
@@ -25,6 +25,7 @@
 
 axios
 .get(`https://lambda-times-backend.herokuapp.com/articles/`)
+
 .then((res)=>{
     console.log ('Yes! This is the res:', res)
 
@@ -51,7 +52,7 @@ axios
 
  .catch((err)=>{
     console.log('What the hell?!:', err)
-     })
+     });
  });
 
 function card(items){
@@ -60,13 +61,13 @@ function card(items){
     const authorInfo = document.createElement('div');
     const imageContainer = document.createElement('div');
     const image = document.createElement('img');
-    const authorName = document.createAttribute('span');
+    const authorName = document.createElement('span');
 
     cardParent.appendChild(titleH);
     cardParent.appendChild(authorInfo);
     authorInfo.appendChild(imageContainer);
     imageContainer.appendChild(image);
-    //authorInfo.appendChild(authorName);
+    authorInfo.appendChild(authorName);
 
     cardParent.classList.add('card');
     titleH.classList.add('headline');
@@ -75,7 +76,7 @@ function card(items){
 
     titleH.textContent = (items['headline']);
     image.src = (items['authorPhoto']);
-    //authorName = (items['authorName']);
+    authorName.textContent =('By:  ')+(items['authorName']);
 
 
 
