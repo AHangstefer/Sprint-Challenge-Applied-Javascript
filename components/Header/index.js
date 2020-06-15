@@ -38,4 +38,4 @@ return headerParent;
 const headerContainer = document.querySelector('.header-container');
 
 headerContainer.append(Header());
-console.log(headerContainer);
+//console.log(headerContainer);

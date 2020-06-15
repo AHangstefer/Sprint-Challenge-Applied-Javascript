@@ -50,9 +50,9 @@ axios
         cardsContainer.appendChild(card(i))
     })
 
- .catch((err)=>{
-    console.log('What the hell?!:', err)
-     });
+//  .catch((err)=>{
+//     console.log('What the hell?!:', err)
+//      });
  });
 
 function card(items){
@@ -80,6 +80,6 @@ function card(items){
 
 
 
- console.log(cardParent);
+ //console.log(cardParent);
  return cardParent;
 };

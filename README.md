@@ -30,13 +30,25 @@ Edit this document to include your answers after each question. Make sure to lea
 
 1. What is the DOM?
 
+The DOM is short for Document Object Model and is an inferface or go-between that acceses 
+webpages and allows manipulation of the page's content. 
+
 2. What is an event?
+
+ An event is an action taken by the user or browser.
 
 3. What is an event listener?
 
+An evnet listener is a function that waits for an event to occur.
+
 4. Why would we convert a NodeList into an Array?
 
+You can use methods on arrays but not nodelists, so using
+data from an array is easier to manipulate. 
+
 5. What is a component?
+
+A component is code that can be saved and reused when and where needed. 
 
 ### Git Set up
 
