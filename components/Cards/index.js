@@ -27,11 +27,29 @@ axios
 .get(`https://lambda-times-backend.herokuapp.com/articles/`)
 .then((res)=>{
     console.log ('Yes! This is the res:', res)
+
     res.data.articles.bootstrap.forEach((i)=>{
-    const cardsContainer =document.querySelector('.cards-container');
-    cardsContainer.appendChild(card())
+        const cardsContainer =document.querySelector('.cards-container');
+        cardsContainer.appendChild(card(i))
     })
-.catch((err)=>{
+    res.data.articles.javascript.forEach((i)=>{
+        const cardsContainer =document.querySelector('.cards-container');
+        cardsContainer.appendChild(card(i))
+    })
+    res.data.articles.jquery.forEach((i)=>{
+        const cardsContainer =document.querySelector('.cards-container');
+        cardsContainer.appendChild(card(i))
+    })
+    res.data.articles.node.forEach((i)=>{
+        const cardsContainer =document.querySelector('.cards-container');
+        cardsContainer.appendChild(card(i) )
+    })
+    res.data.articles.technology.forEach((i)=>{
+        const cardsContainer =document.querySelector('.cards-container');
+        cardsContainer.appendChild(card(i))
+    })
+
+ .catch((err)=>{
     console.log('What the hell?!:', err)
      })
  });
@@ -48,7 +66,7 @@ function card(items){
     cardParent.appendChild(authorInfo);
     authorInfo.appendChild(imageContainer);
     imageContainer.appendChild(image);
-    authorInfo.appendChild(authorName);
+    //authorInfo.appendChild(authorName);
 
     cardParent.classList.add('card');
     titleH.classList.add('headline');
